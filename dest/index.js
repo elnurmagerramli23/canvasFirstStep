@@ -40,14 +40,40 @@ function View() {
 }
 
 View.prototype.init = function() {
+    
+    
     const container = createDiv({
         class: 'container',
         id: 'container'
     });
-    
    
-    this._root.append(container);
+    const canvas = document.createElement('canvas');
+    canvas.setAttribute('class', 'canvas');
+    canvas.setAttribute('id', 'containerCanvas');
+    canvas.setAttribute('width', '500px');
+    canvas.setAttribute('height', '500px');
+
+    const inputColor = document.createElement('input');
+    inputColor.setAttribute('class', 'input__color');
+    inputColor.setAttribute('id', 'inputColor');
+    inputColor.setAttribute('type', 'color');
+    inputColor.setAttribute('value', '#ff0000');
+
+
+    container.appendChild(inputColor);
+    container.appendChild(canvas);
+    this._root.appendChild(container);
 }
+
+// const createCanvas = params => {
+//     const canvas = document.createElement('canvas');
+//     canvas.setAttribute('class', 'container__canvas');
+//     canvas.id && (canvas.id = params.id);
+//     params.width && (canvas.width = params.width);
+//     params.height && (canvas.height = params.height);
+
+//     return canvas;
+// }
 
 const createDiv = params => {
     const div = document.createElement('div');
@@ -101,7 +127,7 @@ function initProject() {
 	const model = new Model();
    	const view = new View(); 
 	const controller = new Controller(model, view);
- 
+
 	controller.init()
 }
 
