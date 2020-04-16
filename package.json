@@ -1,0 +1,24 @@
+{
+  "name": "canvasfirststep",
+  "version": "1.0.0",
+  "description": "canvas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elnurmagerramli23/canvasFirstStep.git"
+  },
+  "author": "Elnur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elnurmagerramli23/canvasFirstStep/issues"
+  },
+  "homepage": "https://github.com/elnurmagerramli23/canvasFirstStep#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-less": "^4.0.1"
+  }
+}
